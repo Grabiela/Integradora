@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1
+namespace UniKino.Programacion.ProyectoIntegrador.Forms
 {
     public partial class FormProductos : Form
     {
@@ -22,17 +22,17 @@ namespace WindowsFormsApplication1
             {
                 // Renglones seleccionados
                 //MessageBox.Show(dataGridView1.SelectedCells[0].RowIndex + "");
-                label2.Text = "Código: " + dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex].Cells[0].Value.ToString();
-                label3.Text = "Nombre: " + dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex].Cells[1].Value.ToString();
-                label4.Text = "Precio: " + dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex].Cells[2].Value.ToString();
-                pictureBox1.Image = (Bitmap)Image.FromFile(dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex].Cells[3].Value.ToString());
+                CodeLabel.Text = "Código: " + dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex].Cells[0].Value.ToString();
+                NombreLabel.Text = "Nombre: " + dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex].Cells[1].Value.ToString();
+                PrecioLabel.Text = "Precio: " + dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex].Cells[2].Value.ToString();
+                ImageBox2.Image = (Bitmap)Image.FromFile(dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex].Cells[3].Value.ToString());
 
             }
             catch (Exception Error)
             {
 
                 //Quita cualquier imagen al picture box
-                pictureBox1.Image = null;
+                ImageBox2.Image = null;
             }
         }
 
@@ -45,6 +45,11 @@ namespace WindowsFormsApplication1
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ImageBox_Click(object sender, EventArgs e)
         {
 
         }

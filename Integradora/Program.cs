@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using WindowsFormsApplication1.Forms;
+using UniKino.Programacion.ProyectoIntegrador.Forms;
 
-namespace WindowsFormsApplication1
+namespace UniKino.Programacion.ProyectoIntegrador
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace WindowsFormsApplication1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormLogin());
+            Application.Run(new FormMain());
         }
     }
 }

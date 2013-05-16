@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1
+namespace UniKino.Programacion.ProyectoIntegrador.Forms
 {
     public partial class FormCaja : Form
     {
@@ -122,6 +122,11 @@ namespace WindowsFormsApplication1
         {
             toolStripStatusLabel1.Text = "Hora: " + DateTime.Now.ToLongTimeString() + "Fecha: " + DateTime.Now.ToLongDateString();
        
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

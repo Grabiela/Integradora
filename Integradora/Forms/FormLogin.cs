@@ -6,8 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using UniKino.Programacion.ProyectoIntegrador.Forms;
 
-namespace WindowsFormsApplication1
+namespace UniKino.Programacion.ProyectoIntegrador.Forms
 {
     public partial class FormLogin : Form
     {
@@ -18,38 +19,44 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.DialogResult = DialogResult.Cancel;
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {           
-                if (UserNameTextBox.Text.Trim() == string.Empty)
+        {
+            if (UserNameTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("Falta el usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                UserNameTextBox.Focus();
+            }
+            else if (PasswordTextBox.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("Falta el password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                PasswordTextBox.Focus();
+            }
+            else
+            {
+                if (Datos.ValidarUsuario(UserNameTextBox.Text, PasswordTextBox.Text))
                 {
-                    MessageBox.Show("Falta el usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    UserNameTextBox.Focus();
-                }
-                else if (PasswordTextBox.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("Falta el password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    PasswordTextBox.Focus();
+                    // verify this  
+
+                    Datos.UsuarioActual = UserNameTextBox.Text;
+                    this.DialogResult = DialogResult.OK;
+
                 }
                 else
                 {
-                    if (Datos.ValidarUsuario(UserNameTextBox.Text, PasswordTextBox.Text))
-                    {
-                        // verify this  
-
-                        this.Hide();
-                        Datos.UsuarioActual = UserNameTextBox.Text;
-                        new FormMain().Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Usuario o contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        PasswordTextBox.Focus();
-                    }
+                    MessageBox.Show("Usuario o contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    PasswordTextBox.Focus();
                 }
             }
         }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+            this.UserNameTextBox.Text = "Gaby";
+            PasswordTextBox.Text = "123";
+        }
     }
+}
 

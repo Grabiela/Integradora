@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using WindowsFormsApplication1.Models;
+using UniKino.Programacion.ProyectoIntegrador.Models;
 using System.ComponentModel;
 
-namespace WindowsFormsApplication1
+namespace UniKino.Programacion.ProyectoIntegrador
 {
     public static class Datos
     {

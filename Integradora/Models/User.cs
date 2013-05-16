@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace WindowsFormsApplication1.Models
+namespace UniKino.Programacion.ProyectoIntegrador.Models
 {
     public class User
     {
