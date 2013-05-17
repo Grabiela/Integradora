@@ -34,5 +34,10 @@ namespace UniKino.Programacion.ProyectoIntegrador.Forms
                 ImageBox.ImageLocation = String.Format(@"C:\Users\Gabriela\Downloads\images\{0}", user.Image);
             }
         }
+
+        private void Grid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

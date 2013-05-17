@@ -150,6 +150,9 @@ namespace UniKino.Programacion.ProyectoIntegrador.Forms
         {
             if (ProductoText.Text.Trim().Length > 0)
             {
+
+
+
                 _productos.Add(new Product { Descripcion = ProductoText.Text.Trim() });
                 ProductoText.Text = string.Empty;
             }

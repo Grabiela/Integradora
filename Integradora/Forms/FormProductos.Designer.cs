@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProductos));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -36,14 +35,11 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.PrecioLabel = new System.Windows.Forms.Label();
             this.ImageBox2 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.NombreLabel = new System.Windows.Forms.Label();
             this.CodeLabel = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.PrecioLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImageBox2)).BeginInit();
@@ -98,14 +94,12 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "Regresar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.PrecioLabel);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.ImageBox2);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.NombreLabel);
@@ -117,25 +111,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = " Detalles ";
             // 
-            // label5
+            // PrecioLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(16, 39);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Nombre:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(20, 16);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Código:";
+            this.PrecioLabel.AutoSize = true;
+            this.PrecioLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.PrecioLabel.Location = new System.Drawing.Point(28, 67);
+            this.PrecioLabel.Name = "PrecioLabel";
+            this.PrecioLabel.Size = new System.Drawing.Size(43, 13);
+            this.PrecioLabel.TabIndex = 8;
+            this.PrecioLabel.Text = "Precio: ";
             // 
             // ImageBox2
             // 
@@ -160,7 +144,7 @@
             // 
             this.NombreLabel.AutoSize = true;
             this.NombreLabel.ForeColor = System.Drawing.Color.DimGray;
-            this.NombreLabel.Location = new System.Drawing.Point(115, 39);
+            this.NombreLabel.Location = new System.Drawing.Point(28, 39);
             this.NombreLabel.Name = "NombreLabel";
             this.NombreLabel.Size = new System.Drawing.Size(56, 13);
             this.NombreLabel.TabIndex = 3;
@@ -170,31 +154,11 @@
             // 
             this.CodeLabel.AutoSize = true;
             this.CodeLabel.ForeColor = System.Drawing.Color.DimGray;
-            this.CodeLabel.Location = new System.Drawing.Point(115, 16);
+            this.CodeLabel.Location = new System.Drawing.Point(28, 16);
             this.CodeLabel.Name = "CodeLabel";
             this.CodeLabel.Size = new System.Drawing.Size(46, 13);
             this.CodeLabel.TabIndex = 2;
             this.CodeLabel.Text = "Usuario:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.DimGray;
-            this.label8.Location = new System.Drawing.Point(20, 67);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 13);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Precio: ";
-            // 
-            // PrecioLabel
-            // 
-            this.PrecioLabel.AutoSize = true;
-            this.PrecioLabel.ForeColor = System.Drawing.Color.DimGray;
-            this.PrecioLabel.Location = new System.Drawing.Point(115, 67);
-            this.PrecioLabel.Name = "PrecioLabel";
-            this.PrecioLabel.Size = new System.Drawing.Size(43, 13);
-            this.PrecioLabel.TabIndex = 8;
-            this.PrecioLabel.Text = "Precio: ";
             // 
             // FormProductos
             // 
@@ -224,13 +188,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox ImageBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label NombreLabel;
         private System.Windows.Forms.Label CodeLabel;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label PrecioLabel;
     }
 }

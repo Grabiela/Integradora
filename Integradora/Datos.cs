@@ -30,12 +30,12 @@ namespace UniKino.Programacion.ProyectoIntegrador
 
         static Datos()
         {
-            Usuarios.Add(new User { UserName = "Gaby", Password = "123", Image = "trinity.jpg" });
-            Usuarios.Add(new User { UserName = "Luz", Password = "1234", Image = "next.jpg" });
-            Usuarios.Add(new User { UserName = "Martin", Password = "1323", Image = "toK.jpg" });
-            Usuarios.Add(new User { UserName = "Chito", Password = "1523", Image = "poe.jpg" });
-            Usuarios.Add(new User { UserName = "Poncho", Password = "1823", Image = "Mr Poncho.jpg" });
-            Usuarios.Add(new User { UserName = "Daniel", Password = "1273", Image = "animal.jpg" });
+            Usuarios.Add(new User { UserName = "Gaby", Password = "0928", Image = "Popeye.jpg" });
+            Usuarios.Add(new User { UserName = "Luz", Password = "0516", Image = "zombie.jpg" });
+            Usuarios.Add(new User { UserName = "Martin", Password = "1031", Image = "Waldo.jpg" });
+            Usuarios.Add(new User { UserName = "Chito", Password = "0212", Image = "Raphael.jpg" });
+            Usuarios.Add(new User { UserName = "Poncho", Password = "0601", Image = "Mr Poncho.jpg" });
+            Usuarios.Add(new User { UserName = "Daniel", Password = "0827", Image = "CBrown.jpg" });
         }
 
         public static string GetImagePath(string imageName)
@@ -46,10 +46,18 @@ namespace UniKino.Programacion.ProyectoIntegrador
         // 10 productos precargados
         public static String[,] Productos =
         {
-            {"7806610034151", "Vestido Negro", "150.00", "bicicleta.jpg"},
-            {"7501000132300", "Bolsa de mano", "100.00", "Camara.jpg"},
-            {"766623311731", "Zapatos Negros", "60.00", "celular.jpg"},
-            {"7501055310883", "Collar Turquesa", "56.00", "reloj.jpg"}
+            {"7806610034151", "Bicicleta", "150.00", "bicicleta.jpg"},
+            {"7501000132300", "Camara", "385.50", "Camara.jpg"},
+            {"766623311731", "Celular", "61.80", "celular.jpg"},
+            {"7501055310883", "Reloj", "54.99", "reloj.jpg"},
+            {"7501055310883", "Vestido", "325.60", "Dresses.jpg"},
+            {"7501055310883", "Aretes", "93.99", "earings.jpg"},
+            {"7501055310883", "Control", "167.20", "xbox.jpg"},
+            {"7501055310883", "Bolsa", "182.95", "purse.jpg"},
+            {"073852029383", "Zapatillas", "350.15", "redshoes.jpg"},
+            {"0400005622090", "Gafas", "120.55", "lentes.jpg"},
+
+
         };
 
         public static bool ValidarUsuario(string user, string pass)

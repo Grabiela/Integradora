@@ -101,7 +101,7 @@
             this.StatusBarLabel.Size = new System.Drawing.Size(118, 17);
             this.StatusBarLabel.Text = "toolStripStatusLabel1";
             // 
-            // GridUsuarios
+            // Grid
             // 
             this.Grid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
@@ -109,9 +109,10 @@
             this.Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Grid.Location = new System.Drawing.Point(12, 12);
-            this.Grid.Name = "GridUsuarios";
+            this.Grid.Name = "Grid";
             this.Grid.Size = new System.Drawing.Size(388, 250);
             this.Grid.TabIndex = 6;
+            this.Grid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellContentClick);
             this.Grid.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridUsuarios_CellEnter);
             // 
             // DetallesBox

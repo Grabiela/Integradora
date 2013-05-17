@@ -51,6 +51,9 @@ namespace UniKino.Programacion.ProyectoIntegrador.Forms
         {
             if (_formProductos == null)
                 _formProductos = new FormProductos();
+
+            _formProductos.Disposed += (se, ev) => { _formProductos = null; };
+
             _formProductos.MdiParent = this;
             _formProductos.Show();
         }
@@ -59,6 +62,9 @@ namespace UniKino.Programacion.ProyectoIntegrador.Forms
         {
             if (_formCaja == null)
                 _formCaja = new FormCaja();
+
+            _formCaja.Disposed += (se, ev) => { _formCaja = null; };
+
             _formCaja.MdiParent = this;
             _formCaja.Show();
         }
