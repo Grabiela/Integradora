@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using UniKino.Programacion.ProyectoIntegrador.Models;
 
@@ -15,7 +13,7 @@ namespace UniKino.Programacion.ProyectoIntegrador.Forms
         Random r = new Random();
         int temporal = 0;
 
-        List<Product> _productos = new List<Product>();
+        List<Producto> _productos = new List<Producto>();
 
         public FormCaja()
         {
@@ -26,11 +24,9 @@ namespace UniKino.Programacion.ProyectoIntegrador.Forms
         {
             Grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             Grid.AllowUserToDeleteRows = true;
-            Grid.DataSource = new BindingList<Product>(_productos);
+            Grid.DataSource = new BindingList<Producto>(_productos);
 
             Grid.Columns["Imagen"].Visible = false;
-            Grid.Columns["Imagen"].Visible = false;
-
 
             // toolStripStatusLabel1.Text = "Hora: " + DateTime.Now.ToLongTimeString() + "  " + "Fecha: " + DateTime.Now.ToLongDateString();
         }
@@ -141,22 +137,46 @@ namespace UniKino.Programacion.ProyectoIntegrador.Forms
             if (e.KeyCode == Keys.Return)
             {
                 AgregarProducto();
-                Grid.DataSource = new BindingList<Product>(_productos);
+                Grid.DataSource = new BindingList<Producto>(_productos);
             }
 
         }
 
         private void AgregarProducto()
         {
-            if (ProductoText.Text.Trim().Length > 0)
+            var texto = ProductoText.Text.Trim();
+            if (texto.Length > 0)
             {
+                int cantidad;
+                int codigo = 0;
+                string descripcion = string.Empty;
 
+                var partes = texto.Split(new char[] { '*' });
 
+                cantidad = int.Parse(partes[0]);
+                if (!int.TryParse(partes[1], out codigo))
+                {
+                    descripcion = partes[1];
+                }
 
-                _productos.Add(new Product { Descripcion = ProductoText.Text.Trim() });
+                Producto producto = codigo == 0
+                    ? Datos.BuscarProducto(descripcion)
+                    : Datos.BuscarProducto(codigo.ToString());
+
+                if (producto == null)
+                {
+                    MessageBox.Show("No lo encotre");
+                    return;
+                }
+
+                producto.Cantidad = cantidad;
+
+                _productos.Add(producto);
+
                 ProductoText.Text = string.Empty;
+
+                TotalLabel.Text = String.Format("TOTAL: {0:C}", _productos.Sum(x => x.Subtotal));
             }
         }
-
     }
 }

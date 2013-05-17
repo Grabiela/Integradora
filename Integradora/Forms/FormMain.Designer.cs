@@ -31,9 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuUsuarios = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuCaja = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuProductos = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuUsuarios = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.MenuCaja = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.MenuSesion = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
@@ -54,16 +55,17 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.MdiWindowListItem = this.ventanasToolStripMenuItem;
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(784, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1008, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MenuUsuarios,
-            this.MenuCaja,
             this.MenuProductos,
+            this.MenuUsuarios,
+            this.toolStripMenuItem2,
+            this.MenuCaja,
             this.toolStripSeparator1,
             this.MenuSesion,
             this.toolStripMenuItem1,
@@ -72,6 +74,13 @@
             this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.usuariosToolStripMenuItem.Text = "Menu";
             // 
+            // MenuProductos
+            // 
+            this.MenuProductos.Name = "MenuProductos";
+            this.MenuProductos.Size = new System.Drawing.Size(143, 22);
+            this.MenuProductos.Text = "Productos";
+            this.MenuProductos.Click += new System.EventHandler(this.MenuProductos_Click);
+            // 
             // MenuUsuarios
             // 
             this.MenuUsuarios.Name = "MenuUsuarios";
@@ -79,19 +88,17 @@
             this.MenuUsuarios.Text = "Usuarios";
             this.MenuUsuarios.Click += new System.EventHandler(this.MenuUsuarios_Click);
             // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(140, 6);
+            // 
             // MenuCaja
             // 
             this.MenuCaja.Name = "MenuCaja";
             this.MenuCaja.Size = new System.Drawing.Size(143, 22);
             this.MenuCaja.Text = "Caja";
             this.MenuCaja.Click += new System.EventHandler(this.MenuCaja_Click);
-            // 
-            // MenuProductos
-            // 
-            this.MenuProductos.Name = "MenuProductos";
-            this.MenuProductos.Size = new System.Drawing.Size(143, 22);
-            this.MenuProductos.Text = "Productos";
-            this.MenuProductos.Click += new System.EventHandler(this.MenuProductos_Click);
             // 
             // toolStripSeparator1
             // 
@@ -128,9 +135,9 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.StatusBarUsuario,
             this.StatusBarFecha});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 537);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 705);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(784, 24);
+            this.statusStrip1.Size = new System.Drawing.Size(1008, 24);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -153,9 +160,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1008, 729);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
@@ -189,5 +199,6 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel StatusBarUsuario;
         private System.Windows.Forms.ToolStripStatusLabel StatusBarFecha;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
     }
 }

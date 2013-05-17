@@ -74,8 +74,8 @@
     <Compile Include="Forms\FormProductos.Designer.cs">
       <DependentUpon>FormProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Product.cs" />
-    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Producto.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\FormUsuarios.cs">
@@ -122,8 +122,15 @@
   <ItemGroup>
     <Content Include="ico.ico" />
     <Content Include="Images\bicicleta.jpg" />
+    <Content Include="Images\brown.jpg" />
     <Content Include="Images\Camara.jpg" />
     <Content Include="Images\celular.jpg" />
+    <Content Include="Images\Dresses.jpg" />
+    <Content Include="Images\earings.jpg" />
+    <Content Include="Images\lentes.jpg" />
+    <Content Include="Images\Lorissa.jpg" />
+    <Content Include="Images\purse.jpg" />
+    <Content Include="Images\redshoes.jpg" />
     <Content Include="Images\reloj.jpg" />
     <Content Include="Images\tenis.jpg" />
     <Content Include="Images\xbox.jpg" />

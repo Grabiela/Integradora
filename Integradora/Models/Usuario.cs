@@ -5,9 +5,9 @@ using System.Text;
 
 namespace UniKino.Programacion.ProyectoIntegrador.Models
 {
-    public class User
+    public class Usuario
     {
-        public string UserName { get; set; }
+        public string Username { get; set; }
         public string Password { get; set; }
         public string Image { get; set; }
     }

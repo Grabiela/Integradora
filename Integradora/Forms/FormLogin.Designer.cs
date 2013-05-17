@@ -35,61 +35,75 @@
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.ButtonOK = new System.Windows.Forms.Button();
             this.ButtonCancel = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 33);
+            this.label1.Location = new System.Drawing.Point(34, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Usuario:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 59);
+            this.label2.Location = new System.Drawing.Point(16, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.Size = new System.Drawing.Size(69, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Password:";
+            this.label2.Text = "Contraseña:";
             // 
             // UserNameTextBox
             // 
-            this.UserNameTextBox.Location = new System.Drawing.Point(87, 26);
+            this.UserNameTextBox.Location = new System.Drawing.Point(90, 39);
             this.UserNameTextBox.Name = "UserNameTextBox";
-            this.UserNameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.UserNameTextBox.Size = new System.Drawing.Size(216, 22);
             this.UserNameTextBox.TabIndex = 2;
             // 
             // PasswordTextBox
             // 
-            this.PasswordTextBox.Location = new System.Drawing.Point(87, 56);
+            this.PasswordTextBox.Location = new System.Drawing.Point(90, 95);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.PasswordChar = '●';
-            this.PasswordTextBox.Size = new System.Drawing.Size(100, 20);
+            this.PasswordTextBox.Size = new System.Drawing.Size(216, 22);
             this.PasswordTextBox.TabIndex = 3;
             // 
             // ButtonOK
             // 
-            this.ButtonOK.Location = new System.Drawing.Point(28, 93);
+            this.ButtonOK.Location = new System.Drawing.Point(278, 197);
             this.ButtonOK.Name = "ButtonOK";
             this.ButtonOK.Size = new System.Drawing.Size(75, 23);
             this.ButtonOK.TabIndex = 4;
             this.ButtonOK.Text = "Aceptar";
             this.ButtonOK.UseVisualStyleBackColor = true;
-            this.ButtonOK.Click += new System.EventHandler(this.button1_Click);
+            this.ButtonOK.Click += new System.EventHandler(this.ButtonOk_Click);
             // 
             // ButtonCancel
             // 
             this.ButtonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.ButtonCancel.Location = new System.Drawing.Point(142, 93);
+            this.ButtonCancel.Location = new System.Drawing.Point(197, 197);
             this.ButtonCancel.Name = "ButtonCancel";
             this.ButtonCancel.Size = new System.Drawing.Size(75, 23);
             this.ButtonCancel.TabIndex = 5;
             this.ButtonCancel.Text = "Salir";
             this.ButtonCancel.UseVisualStyleBackColor = true;
-            this.ButtonCancel.Click += new System.EventHandler(this.button2_Click);
+            this.ButtonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.UserNameTextBox);
+            this.groupBox1.Controls.Add(this.PasswordTextBox);
+            this.groupBox1.Location = new System.Drawing.Point(25, 28);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(328, 151);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
             // 
             // FormLogin
             // 
@@ -97,22 +111,20 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.ButtonCancel;
-            this.ClientSize = new System.Drawing.Size(242, 150);
+            this.ClientSize = new System.Drawing.Size(376, 239);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.ButtonCancel);
             this.Controls.Add(this.ButtonOK);
-            this.Controls.Add(this.PasswordTextBox);
-            this.Controls.Add(this.UserNameTextBox);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Login";
-            this.Load += new System.EventHandler(this.FormLogin_Load);
+            this.Text = "Iniciar Sesion";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -124,6 +136,7 @@
         private System.Windows.Forms.TextBox PasswordTextBox;
         private System.Windows.Forms.Button ButtonOK;
         private System.Windows.Forms.Button ButtonCancel;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 

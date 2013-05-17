@@ -19,25 +19,20 @@ namespace UniKino.Programacion.ProyectoIntegrador.Forms
 
         private void usuarios_Load(object sender, EventArgs e)
         {
-            Grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            GridUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            Grid.DataSource = new BindingList<User>(Datos.Usuarios);
+            GridUsuarios.DataSource = new BindingList<Usuario>(Datos.Usuarios);
         }
 
         private void GridUsuarios_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            var user = Grid.Rows[e.RowIndex].DataBoundItem as User;
+            var user = GridUsuarios.Rows[e.RowIndex].DataBoundItem as Usuario;
             if (user != null)
             {
-                UsernameLabel.Text = user.UserName;
+                UsernameLabel.Text = user.Username;
                 PasswordLabel.Text = user.Password;
                 ImageBox.ImageLocation = String.Format(@"C:\Users\Gabriela\Downloads\images\{0}", user.Image);
             }
-        }
-
-        private void Grid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

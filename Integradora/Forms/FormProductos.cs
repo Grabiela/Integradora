@@ -21,14 +21,14 @@ namespace UniKino.Programacion.ProyectoIntegrador.Forms
         {
             try
             {
-                var row = dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex];
+                var row = Grid.Rows[Grid.SelectedCells[0].RowIndex];
 
                 // Renglones seleccionados
 
                 CodeLabel.Text = "Código: " + row.Cells[0].Value.ToString();
                 NombreLabel.Text = "Nombre: " + row.Cells[1].Value.ToString();
                 PrecioLabel.Text = "Precio: " + row.Cells[2].Value.ToString();
-                ImageBox2.Image = (Bitmap)Image.FromFile(Datos.GetImagePath(row.Cells[3].Value.ToString()));
+                ImageBox2.Image = (Bitmap)Image.FromFile(Datos.UbicacionDeLaImagen(row.Cells[3].Value.ToString()));
 
             }
             catch (Exception Error)
@@ -43,7 +43,9 @@ namespace UniKino.Programacion.ProyectoIntegrador.Forms
         {
             for (int i = 0; i <= Datos.Productos.GetUpperBound(0); i++)
             {
-                dataGridView1.Rows.Add(Datos.Productos[i, 0], Datos.Productos[i, 1], Datos.Productos[i, 2], Datos.Productos[i, 3]);
+                Grid.Rows.Add(Datos.Productos[i, 0], Datos.Productos[i, 1], Datos.Productos[i, 2], Datos.Productos[i, 3]);
+                
+                Grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
         }
 

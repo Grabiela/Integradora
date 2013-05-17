@@ -25,7 +25,7 @@ namespace UniKino.Programacion.ProyectoIntegrador.Forms
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            //this.WindowState = FormWindowState.Maximized;
         }
 
         private void FormMain_Shown(object sender, EventArgs e)
