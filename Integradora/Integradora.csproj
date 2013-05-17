@@ -74,6 +74,7 @@
     <Compile Include="Forms\FormProductos.Designer.cs">
       <DependentUpon>FormProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -120,7 +121,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ico.ico" />
+    <Content Include="Images\bicicleta.jpg" />
+    <Content Include="Images\Camara.jpg" />
+    <Content Include="Images\celular.jpg" />
+    <Content Include="Images\reloj.jpg" />
+    <Content Include="Images\tenis.jpg" />
+    <Content Include="Images\xbox.jpg" />
+    <Content Include="login.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

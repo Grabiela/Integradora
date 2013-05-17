@@ -4,14 +4,29 @@ using System.Linq;
 using System.Text;
 using UniKino.Programacion.ProyectoIntegrador.Models;
 using System.ComponentModel;
+using System.Reflection;
+using System.IO;
 
 namespace UniKino.Programacion.ProyectoIntegrador
 {
     public static class Datos
     {
-        public static String UsuarioActual = "Yo Mera!!!";
+        public static String UsuarioActual = String.Empty;
+
+        private static string currentAssemblyDirectoryName = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
         public static List<User> Usuarios = new List<User>();
+
+        public static string ImagesFolder
+        {
+            get
+            {
+                return String.Format(@"{0}\Images\",
+                    currentAssemblyDirectoryName.ToLower()
+                                                .Replace(@"\bin\debug", String.Empty)
+                                                .Replace(@"\bin\release", String.Empty));
+            }
+        }
 
         static Datos()
         {
@@ -23,21 +38,18 @@ namespace UniKino.Programacion.ProyectoIntegrador
             Usuarios.Add(new User { UserName = "Daniel", Password = "1273", Image = "animal.jpg" });
         }
 
-
-        public static String[,] Usuarios_original = {
-                             {"humberto", "123", @"c\\:1.jpg"},
-                             {"panchito", "546", @"c\\:2.jpg"},
-                             {"raulitos", "098", @"c\\:3.jpg"},
-                             {"mikessss", "241", @"c\\:4.jpg"}
-                             };
+        public static string GetImagePath(string imageName)
+        {
+            return Path.Combine(ImagesFolder, imageName);
+        }
 
         // 10 productos precargados
         public static String[,] Productos =
         {
-            {"7806610034151", "Cuaderno", "7.00", @"C:\Users\Fer\Pictures\Escuelita\Programacion\images (2).jpg"},
-            {"7501000132300", "Bollitos", "10.00", @"C\:NOSE.jpg"},
-            {"766623311731", "Empanadas", "6.00", @"C\:NOSE.jpg"},
-            {"7501055310883", "Coyotas", "5.00", @"C\:NOSE.jpg"}
+            {"7806610034151", "Vestido Negro", "150.00", "bicicleta.jpg"},
+            {"7501000132300", "Bolsa de mano", "100.00", "Camara.jpg"},
+            {"766623311731", "Zapatos Negros", "60.00", "celular.jpg"},
+            {"7501055310883", "Collar Turquesa", "56.00", "reloj.jpg"}
         };
 
         public static bool ValidarUsuario(string user, string pass)
@@ -60,6 +72,6 @@ namespace UniKino.Programacion.ProyectoIntegrador
 
             //return valid;
         }
-
+        
     }
 }

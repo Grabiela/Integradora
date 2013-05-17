@@ -203,7 +203,6 @@
             this.ClientSize = new System.Drawing.Size(728, 379);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormProductos";
             this.Text = "Productos";

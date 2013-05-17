@@ -35,14 +35,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.StatusBarStrip = new System.Windows.Forms.StatusStrip();
             this.StatusBarLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.GridUsuarios = new System.Windows.Forms.DataGridView();
+            this.Grid = new System.Windows.Forms.DataGridView();
             this.DetallesBox = new System.Windows.Forms.GroupBox();
             this.PasswordTitle = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ImageBox)).BeginInit();
             this.StatusBarStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GridUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             this.DetallesBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -103,16 +103,16 @@
             // 
             // GridUsuarios
             // 
-            this.GridUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.Grid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.GridUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.GridUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridUsuarios.Location = new System.Drawing.Point(12, 12);
-            this.GridUsuarios.Name = "GridUsuarios";
-            this.GridUsuarios.Size = new System.Drawing.Size(388, 250);
-            this.GridUsuarios.TabIndex = 6;
-            this.GridUsuarios.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridUsuarios_CellEnter);
+            this.Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Grid.Location = new System.Drawing.Point(12, 12);
+            this.Grid.Name = "GridUsuarios";
+            this.Grid.Size = new System.Drawing.Size(388, 250);
+            this.Grid.TabIndex = 6;
+            this.Grid.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridUsuarios_CellEnter);
             // 
             // DetallesBox
             // 
@@ -161,7 +161,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(651, 291);
             this.Controls.Add(this.DetallesBox);
-            this.Controls.Add(this.GridUsuarios);
+            this.Controls.Add(this.Grid);
             this.Controls.Add(this.StatusBarStrip);
             this.Name = "FormUsuarios";
             this.Text = "Usuarios";
@@ -169,7 +169,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ImageBox)).EndInit();
             this.StatusBarStrip.ResumeLayout(false);
             this.StatusBarStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GridUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
             this.DetallesBox.ResumeLayout(false);
             this.DetallesBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
@@ -186,7 +186,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.StatusStrip StatusBarStrip;
         private System.Windows.Forms.ToolStripStatusLabel StatusBarLabel;
-        private System.Windows.Forms.DataGridView GridUsuarios;
+        private System.Windows.Forms.DataGridView Grid;
         private System.Windows.Forms.BindingSource userBindingSource;
         private System.Windows.Forms.GroupBox DetallesBox;
         private System.Windows.Forms.Label PasswordTitle;
